@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">    
+
+    <head> 
+
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" /> 
+
+	<!-- Title -->
+	<title></title>
+	
+	<link rel = "stylesheet" type = "text/css" href = "style.css" /> 
+	
+	<!-- JavaScript includes -->
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script> 
+	
+	<!-- favicon -->
+	<link rel="SHORTCUT ICON" href=""/> 
+    
+	<!-- Meta tags -->
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" /> 
+
+	<style type="text/css">
+		#drag-constrain{
+			border: solid 1px #000;
+			height: 400px;
+			
+			margin: 100px;
+			overflow: hidden;
+			position: absolute;
+			
+			width: 600px;
+		}
+		
+		#draggable-container{
+			height: inherit;
+			left: 0px;
+			position: absolute;
+			width: inherit;
+			top: 0px;
+		}
+		
+		#draggable-container:hover{
+			cursor: move;
+		}
+		
+		#content{
+			left: 0px;
+			position: absolute;
+			top: 0px;
+		}
+		
+	</style>
+	
+	<script type="text/javascript">
+		
+		$(function(){
+			$('#draggable-container').draggable({
+				stop: function(){
+		
+					$('#content').css({
+						left: pxToInt($('#content').css('left')) + pxToInt($('#draggable-container').css('left')),
+						top: pxToInt($('#content').css('top')) + pxToInt($('#draggable-container').css('top'))
+					});
+					
+					$('#draggable-container').css({
+						left : 0,
+						top: 0
+					});
+				}
+			});
+		})
+		
+		
+		function pxToInt(str){
+			return parseInt(str.replace(/px/gi, ''));
+		}
+		
+	</script>
+
+    </head> 
+
+    <body> 
+		
+		<div id="drag-constrain">
+			<div id="draggable-container">
+				<div id="content">
+					<h1>Look at these ducks!</h1>
+					<img src="images/duck1.jpeg" alt="Duck 1" />
+					<img src="images/duck2.jpeg" alt="Duck 2" />
+					<img src="images/duck3.jpeg" alt="Duck 3" />
+					<img src="images/duck4.jpeg" alt="Duck 4" />
+					<img src="images/duck5.jpeg" alt="Duck 5" />
+				
+				</div>
+			</div>
+		</div>
+		
+    </body> 
+
+</html>

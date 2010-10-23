@@ -37,11 +37,19 @@
 		}
 		
 		#draggable-container{
-			height: inherit;
+			height: 400px;
 			left: 0px;
 			position: absolute;
-			width: inherit;
+			width: 600px;
 			top: 0px;
+			/* Silly hack to make IE7 work. */
+			background: url(.);
+		}
+		
+		#content{
+			/*overflow: auto;*/
+			min-height: 400px;
+			min-width: 600px;
 		}
 		
 		#draggable-container:hover{

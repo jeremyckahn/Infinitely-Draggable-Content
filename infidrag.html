@@ -43,12 +43,12 @@
 			position: absolute;
 			width: 600px;
 			top: 0px;
+			
 			/* Silly hack to make IE7 work. */
 			background: url(.);
 		}
 		
 		#content{
-			/*overflow: auto;*/
 			min-height: 400px;
 			min-width: 600px;
 		}
@@ -66,7 +66,7 @@
 	</style>
 	
 	<script type="text/javascript">
-		
+		/*
 		$(function(){
 			$('#draggable-container').draggable({
 				stop: function(){
@@ -88,15 +88,19 @@
 		function pxToInt(str){
 			return parseInt(str.replace(/px/gi, ''));
 		}
+		//*/
 		
+		$(function(){
+			$('#content').infiDrag();
+		});
 	</script>
 
     </head> 
 
     <body> 
 		
-		<div id="drag-constrain">
-			<div id="draggable-container">
+		<!--><div id="drag-constrain">
+			<div id="draggable-container">-->
 				<div id="content">
 					<h1>Look at these ducks!</h1>
 					<img src="images/duck1.jpeg" alt="Duck 1" />
@@ -106,8 +110,8 @@
 					<img src="images/duck5.jpeg" alt="Duck 5" />
 				
 				</div>
-			</div>
-		</div>
+			<!--></div>
+		</div>-->
 		
     </body> 
 

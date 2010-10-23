@@ -2,4 +2,4 @@ An implementation of HTML content that can be dragged around infinitely inside o
 
 Now available as a jQuery plugin!  It's called jquery.ui.infiDrag.js, and it depends on jQuery 1.4 and jQueryUI 1.8 Draggable.
 
-A demonstration: http://www.jeremyckahn.com/misc/Infinitely-Draggable-Content/infidrag.html
+A demonstration: http://www.jeremyckahn.com/misc/Infinitely-Draggable-Content/

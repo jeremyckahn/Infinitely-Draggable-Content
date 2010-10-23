@@ -9,9 +9,15 @@
 		var constrain = $('<div>', { class : 'infi_draggable_constrain' }),
 			draggable = $('<div>', { class : 'infi_draggable_container' });
 			
-		$(this).replaceWith(
+		/*$(this).replaceWith(
 			constrain.html(
-				draggable.html(this)));
+				draggable.html(this)));*/
+				
+		$this.append(
+			constrain.html(
+				draggable.html($this.clone()[0])));
+				
+		$this.detach();
 	//});
 
 	return this;

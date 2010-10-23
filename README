@@ -1,5 +1,14 @@
-An implementation of HTML content that can be dragged around infinitely inside of a constrained area.
+Dependencies:  jQuery 1.4.2 or above, jQuery UI 1.8 (Draggable) or above
 
-Now available as a jQuery plugin!  It's called jquery.ui.infiDrag.js, and it depends on jQuery 1.4 and jQueryUI 1.8 Draggable.
+Description: This plugin takes some content and makes it draggable to infinite bounds within a constrained area.
+It works much like the draggable map in Google Maps.
 
-A demonstration: http://www.jeremyckahn.com/misc/Infinitely-Draggable-Content/
+Instructions: Simply call '$().infidrag()' on whatever element you want to make draggable.  Define the bounds
+with options 'height' and 'width.'  Here's an example:
+
+$('#content').infiDrag({
+	height: 400,
+	width: 600
+});
+
+Tested on IE 7 and 8, Firefox, Chrome and Safari.

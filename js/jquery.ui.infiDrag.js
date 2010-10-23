@@ -16,6 +16,8 @@ $('#content').infiDrag({
 	width: 600
 });
 
+Tested on IE 7 and 8, Firefox, Chrome and Safari.
+
 */
 
 (function( $ ){

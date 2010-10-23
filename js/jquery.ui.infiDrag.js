@@ -3,6 +3,8 @@ Infinitely Draggable Content Area Plugin
 v. 0.1
 By Jeremy Kahn, jeremyckahn@gmail.com
 
+Project link: http://github.com/jeremyckahn/Infinitely-Draggable-Content
+
 Dependencies:  jQuery 1.4.2 or above, jQuery UI 1.8 (Draggable) or above
 
 Description: This plugin takes some content and makes it draggable to infinite bounds within a constrained area.
